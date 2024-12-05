@@ -7,6 +7,7 @@ import 'react-native-reanimated';
 import { ClerkProvider, useAuth  } from '@clerk/clerk-expo'
 import * as SecureStore from 'expo-secure-store'
 import { View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!
 
 // Cache the clerk JWT
@@ -87,7 +88,8 @@ const InitialRoute = () => {
 const RootLayoutNav = () => {
   return (
     <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
-        <InitialRoute />
+      <StatusBar style='auto'/>
+      <InitialRoute />
     </ClerkProvider>
   );
 }

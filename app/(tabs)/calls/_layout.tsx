@@ -20,8 +20,7 @@ const Layout = () => {
                 headerBlurEffect: 'regular',
                 headerStyle: {backgroundColor: Colors.background},
                 headerSearchBarOptions: {
-                    placeholder: 'Search',
-                    placement: 'automatic'
+                    placeholder: 'Search'
                 },
                 headerRight: () => (
                     <TouchableOpacity>
